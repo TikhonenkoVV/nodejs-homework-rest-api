@@ -1,5 +1,5 @@
 const ctrlWrapper = require("./ctrlWrapper");
-const RequestError = require("./RequestError");
+const RequestError = require("./requestError");
 const authHelper = require("./authHelper");
 
 module.exports = {
