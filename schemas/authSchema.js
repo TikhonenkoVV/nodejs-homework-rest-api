@@ -2,6 +2,7 @@ const joi = require("joi");
 const { emailRegex, passwordRegex } = require("./patterns");
 
 const signUpSchema = joi.object({
+    name: joi.string().required(),
     email: joi
         .string()
         .regex(emailRegex.pattern)

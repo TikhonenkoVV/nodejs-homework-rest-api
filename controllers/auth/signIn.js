@@ -15,7 +15,11 @@ const signIn = async (req, res) => {
     const tokens = await authHelper.updateTokens(user.id);
     res.json({
         tokens,
-        user: { email: user.email, subscription: user.subscription },
+        user: {
+            name: user.name,
+            email: user.email,
+            subscription: user.subscription,
+        },
     });
 };
 
