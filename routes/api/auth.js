@@ -39,4 +39,11 @@ router.patch(
     contrrollWrapper(authCtrl.uploadAvatar)
 );
 
+router.patch(
+    "/",
+    contrrollWrapper(auth),
+    validateBody(schema.subscriptionSchema),
+    contrrollWrapper(authCtrl.updateSubccription)
+);
+
 module.exports = router;

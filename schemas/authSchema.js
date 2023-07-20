@@ -20,4 +20,8 @@ const signInSchema = joi.object({
     password: joi.string().required(),
 });
 
-module.exports = { signUpSchema, signInSchema };
+const subscriptionSchema = joi.object({
+    subscription: joi.string().valid("starter", "pro", "business").required(),
+});
+
+module.exports = { signUpSchema, signInSchema, subscriptionSchema };

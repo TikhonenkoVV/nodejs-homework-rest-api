@@ -4,7 +4,8 @@ const verifyUser = require("./verifyUser");
 const getCurrentUser = require("./getCurrent");
 const refreshToken = require("./refreshToken");
 const signOut = require("./signOut");
-const uploadAvatar = require("./uploadAvatar");
+const uploadAvatar = require("./updateAvatar");
+const updateSubccription = require("./updateSubscription");
 
 module.exports = {
     signUp,
@@ -14,4 +15,5 @@ module.exports = {
     refreshToken,
     signOut,
     uploadAvatar,
+    updateSubccription,
 };
