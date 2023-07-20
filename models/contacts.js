@@ -8,6 +8,7 @@ const contactsSchema = new Schema(
         },
         surname: {
             type: String,
+            default: "",
         },
         phone: {
             type: String,
@@ -15,9 +16,11 @@ const contactsSchema = new Schema(
         },
         email: {
             type: String,
+            default: "",
         },
         img: {
             type: String,
+            default: "",
         },
         favorite: {
             type: Boolean,
