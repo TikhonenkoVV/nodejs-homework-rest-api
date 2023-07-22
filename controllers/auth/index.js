@@ -6,6 +6,8 @@ const refreshToken = require("./refreshToken");
 const signOut = require("./signOut");
 const uploadAvatar = require("./updateAvatar");
 const updateSubccription = require("./updateSubscription");
+const verifyEmail = require("./verifyEmail");
+const resendVerifyEmail = require("./resendVerifyEmail");
 
 module.exports = {
     signUp,
@@ -16,4 +18,6 @@ module.exports = {
     signOut,
     uploadAvatar,
     updateSubccription,
+    verifyEmail,
+    resendVerifyEmail,
 };

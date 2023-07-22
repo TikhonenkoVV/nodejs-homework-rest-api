@@ -12,6 +12,13 @@ router.post(
     contrrollWrapper(authCtrl.signUp)
 );
 
+router.get(
+    "/verify/:verificationToken",
+    contrrollWrapper(authCtrl.verifyEmail)
+);
+
+router.get("/verify", contrrollWrapper(authCtrl.resendVerifyEmail));
+
 router.post(
     "/signin",
     validateBody(schema.signInSchema),
