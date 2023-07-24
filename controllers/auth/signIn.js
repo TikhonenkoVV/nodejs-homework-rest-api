@@ -5,8 +5,12 @@ const { RequestError, authHelper } = require("../../helpers");
 const signIn = async (req, res) => {
     const { email, password } = req.body;
     const user = await User.findOne({ email });
+    // console.log();
     if (!user) {
         throw RequestError(401, "Email or password is wrong");
+    }
+    if (!user.verify) {
+        throw RequestError(401, "Email is not verified! Check your mailbox!");
     }
     const isValidPassword = await bcrypt.compare(password, user.password);
     if (!isValidPassword) {

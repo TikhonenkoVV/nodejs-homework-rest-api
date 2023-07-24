@@ -6,7 +6,7 @@ const jwt = require("jsonwebtoken");
 const { JWT_SECRET } = process.env;
 
 const verifyUser = async (req, res) => {
-    const { email } = req.body;
+    const { email, password } = req.body;
     const user = await User.findOne({ email });
     if (!user) {
         throw RequestError(401, "Email or password is wrong");

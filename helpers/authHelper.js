@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-const { v4: uid } = require("uuid");
+const { nanoid } = require("nanoid");
 const Token = require("../models/token");
 const { tokens } = require("../config/tokenConfig").jwt;
 
@@ -20,7 +20,7 @@ const generateAccessToken = (userId) => {
 
 const generateRefreshToken = () => {
     const payload = {
-        id: uid(),
+        id: nanoid(),
         type: tokens.refresh.type,
     };
 

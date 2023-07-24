@@ -1,8 +1,7 @@
-const User = require("../../models/user");
+const { RequestError } = require("../../helpers");
 
 const getCurrentUser = async (req, res) => {
     const { user } = req;
-    console.log(user);
     if (!user) {
         throw RequestError(404, "User not found");
     }
